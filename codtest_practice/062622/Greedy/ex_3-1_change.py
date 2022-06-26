@@ -10,7 +10,12 @@ count = 0                   # 동전의 개수
 coins = [500, 100, 50, 10]  # 큰 단위부터 차례대로 거슬러 준다.
 
 for coin in coins:
-    count += n // coin      # 거슬러주는데 사용되는 동전의 개수
+    original_n = n          # 거슬러줘야 할 돈
+
+    count += n // coin      # 거슬러주는데 사용되는 동전의 총 개수
+    each_count = n // coin  # 거슬러주는데 사용되는 동전별 개수
     n %= coin               # 차례대로 거슬러 주고 남는 값
 
-print("거슬러주는데 사용되는 동전의 개수 : %d개" % (count))
+    print(original_n, '원 -', coin, '원', each_count, '개 =', n, '원')
+
+print("거슬러주는데 사용되는 동전의 총 개수 : %d개" % count)
