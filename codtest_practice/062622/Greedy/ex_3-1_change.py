@@ -16,6 +16,6 @@ for coin in coins:
     each_count = n // coin  # 거슬러주는데 사용되는 동전별 개수
     n %= coin               # 차례대로 거슬러 주고 남는 값
 
-    print(original_n, '원 -', coin, '원', each_count, '개 =', n, '원')
+    print(original_n, "원 -", coin, "원", each_count, "개 =", n, "원")
 
-print("거슬러주는데 사용되는 동전의 총 개수 : %d개" % count)
+print("돈을 거슬러주는데 사용되는 동전의 총 개수 : %d개" % count)
